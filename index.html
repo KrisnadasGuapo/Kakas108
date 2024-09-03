@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Ejemplo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Hotel Krisna</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#habitaciones">Habitaciones</a></li>
+                <li><a href="#precios">Precios</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#reservas">Reservas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <h2>Bienvenido al Hotel Krisna</h2>
+        <p>Descubre una experiencia única de confort y lujo en nuestro hotel.</p>
+    </section>
+
+    <section id="habitaciones">
+        <h2>Nuestras Habitaciones</h2>
+        <div class="habitaciones-contenedor">
+            <div class="habitacion">
+                <h3>Habitación Simple</h3>
+                <img src="img1.jpg" alt="Habitación Simple">
+                <p>Confortable habitación individual para una estancia tranquila.</p>
+            </div>
+            <div class="habitacion">
+                <h3>Habitación Doble</h3>
+                <img src="img2.jpg" alt="Habitación Doble">
+                <p>Espaciosa habitación doble ideal para parejas o amigos.</p>
+            </div>
+            <div class="habitacion">
+                <h3>Suite</h3>
+                <img src="img3.jpg" alt="Suite">
+                <p>Nuestra suite ofrece lujo y elegancia con todas las comodidades.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="precios">
+        <h2>Precios por Noche</h2>
+        <div id="precio-simple" class="precio">
+            <h3>Habitación Simple</h3>
+            <p><span class="precio-valor" id="precio-habitacion-simple"></span> Por noche 100$</p>
+        </div>
+        <div id="precio-doble" class="precio">
+            <h3>Habitación Doble</h3>
+            <p><span class="precio-valor" id="precio-habitacion-doble"></span> Por noche 150$</p>
+        </div>
+        <div id="precio-suite" class="precio">
+            <h3>Suite</h3>
+            <p><span class="precio-valor" id="precio-habitacion-suite"></span> Por noche 220$</p>
+        </div>
+    </section>
+
+    <section id="servicios">
+        <h2>Servicios Adicionales</h2>
+        <form id="form-servicios" class="formulario">
+            <label>
+                <input type="checkbox" id="servicio-comida">
+                Servicio de Comida (20+$<span id="precio-servicio-comida"></span>)
+            </label><br>
+            <label>
+                <input type="checkbox" id="servicio-spa">
+                Servicio de Spa (50+$<span id="precio-servicio-spa"></span>)
+            </label><br>
+        </form>
+    </section>
+
+    <section id="reservas">
+        <h2>Realizar una Reserva</h2>
+        <form id="form-reserva" class="formulario">
+            <div class="campo">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="campo">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="campo">
+                <label for="habitacion">Tipo de Habitación:</label>
+                <select id="habitacion" name="habitacion">
+                    <option value="simple">Simple</option>
+                    <option value="doble">Doble</option>
+                    <option value="suite">Suite</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="fecha">Fecha de Llegada:</label>
+                <input type="date" id="fecha" name="fecha" required>
+            </div>
+
+            <div class="campo">
+                <label>Precio Total:</label>
+                <p id="precio-total">$0</p>
+            </div>
+
+            <div class="campo">
+                <input type="submit" value="Reservar">
+            </div>
+        </form>
+        <p id="mensaje-confirmacion" class="hidden">¡Gracias por su reserva! Hemos enviado una confirmación a su correo electrónico.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hotel Krisna. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
